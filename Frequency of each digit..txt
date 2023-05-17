@@ -1,0 +1,17 @@
+#include<iostream>
+using namespace std;
+int main()
+{
+    int n,i,r;
+    int count=0;
+    int num;
+    cin>>n;
+    cin>>num;
+    for(i=n;i>0;i/=10)
+    {
+       r=i%10;
+       if(r==num)count++;
+       
+    }
+    cout<<count;
+}
