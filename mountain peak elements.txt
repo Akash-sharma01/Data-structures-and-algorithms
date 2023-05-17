@@ -1,0 +1,33 @@
+#include<iostream>
+using namespace std;
+int peak(int a[],int n)
+{
+    int beg=0,mid,end=n-1;
+    
+    while(beg<end)
+    {
+        mid=(beg+end)/2;
+        if(a[mid]<a[mid+1])
+        {
+            beg=mid+1;
+        }
+        else
+        {
+            end=mid;
+        }
+      //  mid=(beg+end)/2;
+    }
+    return beg;
+}
+int main()
+{   
+  //int p,a[4]={3,4,5,1};
+ int p,a[3]={0,1,0};//1
+  // int p,a[4]={0,2,1,0};//1
+  //int p,a[4]={0,10,5,2};//1
+//int p, a[10]={24,69,100,99,79,78,67,36,26,19};
+//int p,a[5]={1,2,3,4,5};
+    p=peak(a,3);
+    cout<<p;
+    
+}
