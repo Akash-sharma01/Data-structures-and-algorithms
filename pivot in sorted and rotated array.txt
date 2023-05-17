@@ -1,0 +1,26 @@
+#include<iostream>
+using namespace std;
+int getpivot(int a[],int n)
+{
+    int beg=0,mid,end=n-1;
+    while(beg<end)
+    {
+        mid=(beg+end)/2;
+        if(a[mid]>=a[0])
+        {
+            beg=mid+1;
+        }
+        else
+        {
+            end=mid;
+        }
+    }
+    return end;
+}
+int main()
+{
+    int p,a[5]={4,5,1,2,3};
+    p=getpivot(a,5);
+    cout<<p;
+}
+    
