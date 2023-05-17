@@ -1,0 +1,32 @@
+#include<iostream>
+using namespace std;
+void isort(int a[],int n)
+{
+    int i;
+    for(i=1;i<n;i++)
+    {   int temp=a[i];
+        int j=i-1;
+        for(;j>=0;j--)
+        {
+            if(a[j]>temp){
+                a[j+1]=a[j];
+            }
+            else {
+                break;
+            }
+        }a[j+1]=temp;
+    }
+}
+int main()
+{
+    int a[5],i;
+    for(i=0;i<5;i++)
+    {
+        cin>>a[i];
+    }
+    isort(a,5);
+    for(i=0;i<5;i++)
+    {
+        cout<<a[i];
+    }
+}
