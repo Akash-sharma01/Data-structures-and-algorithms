@@ -1,0 +1,43 @@
+#include<stdio.h>
+#include<conio.h>
+void getarray(int *a,int n)
+{
+    int i;
+    for(i=0;i<n;i++)
+    {
+        scanf("%d",&a[i]);
+    }
+}
+void putarray(int *a,int n)
+{
+    int i;
+    for(i=0;i<n;i++)
+    {
+        printf("%d",a[i]);
+    }
+}
+void main()
+{
+    int i,pos,val,a[5],n;
+    getarray(a,5);
+    printf("enter the position");
+    scanf("%d",&pos);
+    
+    printf("enter the value");
+    scanf("%d",&val);
+    
+    printf("enter the value of n");
+    scanf("%d",&n);
+    
+    for(i=n-1;i>=pos-1;i--)
+    {
+        a[i+1]=a[i];
+    }
+    a[pos-1]=val;
+    
+    for(i=0;i<=n;i++)
+    {
+        printf("%d",a[i]);
+    }
+    getch();
+}

@@ -1,0 +1,32 @@
+#include<stdio.h>
+#include<conio.h>
+void getarray(int *a,int n)
+{
+    int i;
+    for(i=0;i<n;i++)
+    {
+        scanf("%d",&a[i]);
+    }
+}
+void main()
+{
+    int a[6],n,i,secmax=-999,max=-999;;
+    printf("enter the number of elements:");
+    scanf("%d",&n);
+    getarray(a,6);
+     for(i=0;i<n;i++)
+     {
+    if(a[i]>max)
+     max=a[i];
+     }
+     for(i=0;i<n;i++)
+     {
+         if(a[i]>secmax && a[i]<max)
+         {
+             secmax=a[i];
+         }
+         
+     }
+     printf("%d",secmax);
+    getch();
+}

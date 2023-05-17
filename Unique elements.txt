@@ -1,0 +1,49 @@
+#include<iostream>
+using namespace std;
+void getarray(int a[],int n)
+{
+    int i;
+    for(i=0;i<n;i++)
+    {
+        cin>>a[i];
+    }
+}
+int unique(int a[],int n)
+{
+    int ans=0,i;
+    for(i=0;i<n;i++)
+    {
+        ans=ans^a[i];
+    }
+    return ans;
+}
+int main()
+{
+    int a[10];
+    getarray(a,7);
+    cout<<unique(a,7);
+}
+
+
+
+
+
+//without functions:
+
+/*
+int main()
+{
+    int a[10],i,n;
+    int ans=0;
+    cin>>n;
+    for(i=0;i<n;i++)
+    {
+        cin>>a[i];
+    }
+    for(i=0;i<n;i++)
+    {
+        ans=ans^a[i];
+    }
+    cout<<ans;
+    return 0;
+}*/
