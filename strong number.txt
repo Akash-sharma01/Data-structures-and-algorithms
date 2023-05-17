@@ -1,0 +1,30 @@
+#include<iostream>
+using namespace std;
+int fact(int n)
+{
+    int i,sum=1;
+    for(i=1;i<=n;i++)
+    {
+        sum=sum*i;
+    }
+    return sum;
+}
+int main()
+{
+    int i,n;
+    int sum=0,k,r;
+
+    cin>>i;
+    for(i=n;i>0;i/=10)
+    {
+      int k= i%10;
+       r=fact(k);
+       sum=sum+r;
+    }
+    
+    if(sum==i)
+    cout<<"strong";
+    else 
+    cout<<"not strong";
+    
+}
