@@ -1,0 +1,47 @@
+#include<stdio.h>
+#include<conio.h>
+void getarray(int x[],int n)
+{
+    int i;
+    for(i=0;i<n;i++)
+    {
+        scanf("%d",x+i);
+    }
+}
+
+void putarray(int x[],int n)
+{
+    int i;
+    for(i=0;i<n;i++)
+    {
+        printf("%d",x[i]);
+    }
+}
+
+int ssort(int a[],int n)
+{
+    int i,j,temp;
+    for(i=0;i<n-1;i++)
+    {
+        for(j=i+1;j<n;j++)
+        {
+            if(a[i]>a[j])
+            {
+                temp=a[i];
+                a[i]=a[j];
+                a[j]=temp;
+            }
+            }
+        }
+}
+void main() 
+{
+    int i,n,item,a[5];
+    getarray(a,5);
+    
+   // putarray(a,5);
+    ssort(a,5);
+    
+    putarray(a,5);
+    getch();
+}
