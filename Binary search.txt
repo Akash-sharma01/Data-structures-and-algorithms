@@ -1,0 +1,35 @@
+//Bsearch
+#include<stdio.h>
+#include<conio.h>
+void getarray(int a[],int n)
+{
+    int i;
+    for(i=0;i<n;i++)
+    {
+        scanf("%d",a+i);
+    }
+    
+}
+int bsearch(int x[],int n,int item)
+{
+    int beg=0,mid,end=n-1;
+    while(beg<=end)
+    {
+        mid=(beg+end)/2;
+        if(item==x[mid]) return mid;
+        else if(item<x[mid])end= mid-1;
+        else beg=mid+1;
+    }
+    return -1;
+}
+void main()
+{
+    int i,a[5],item,x;
+    getarray(a,5);
+    scanf("%d",&item);
+    x=bsearch(a,5,item);
+    if(x==-1)printf("Not found");
+    else printf("Element found %d",x+1);
+    getch();
+    
+}
